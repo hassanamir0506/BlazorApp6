@@ -1,0 +1,14 @@
+﻿@page "/"
+@inject DepAppState DState;
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+<p role="status">ApplicationSate Counter Value: @ApplicationState.counter</p>;
+<p role="status">Dependency Counter Value: @DState.counter</p>;
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+@code{
+[CascadingParameter]
+public AppState ApplicationState { get; set; }
+}
